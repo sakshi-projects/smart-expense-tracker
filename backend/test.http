@@ -1,0 +1,57 @@
+### REGISTER
+POST http://localhost:4000/register
+Content-Type: application/json
+
+{
+  "name": "Sakshi",
+  "email": "sakshi@gmail.com",
+  "password": "123456"
+}
+
+###
+
+### LOGIN
+POST http://localhost:4000/login
+Content-Type: application/json
+
+{
+  "email": "sakshi@gmail.com",
+  "password": "123456"
+}
+
+POST http://localhost:4000/set-salary
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "amount": 50000,
+  "month": "February"
+}
+
+POST http://localhost:4000/add-expense
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "title": "Swiggy Food",
+  "amount": 2000
+}
+
+GET http://localhost:4000/check-budget
+Authorization: Bearer YOUR_TOKEN
+
+POST http://localhost:4000/set-goal
+Content-Type: application/json
+Authorization: Bearer YOUR_TOKEN
+
+{
+  "title": "New Phone",
+  "price": 60000,
+  "months": 6
+}
+
+GET http://localhost:4000/goal-analysis
+Authorization: Bearer YOUR_TOKEN
+
+GET http://localhost:4000/export-report
+Authorization: Bearer YOUR_TOKEN
